@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 자반스크립트 조건문 실습</title>
+  </head>
+  <body>
+    <h1> JavaScript 조건문(switch) 실습</h1>
+    <p id="result"> 제 점수는요?</p>
+    <script>
+      var x, y, z;
+      x = prompt("x값을 입력하시오. ex) 10");
+      y = prompt("y값을 입력하시오. ex) 20");
+      var op = prompt ("연산자를 입력하시오. ex) +");
+      switch(op) {
+        case "+";
+          z = x-(-y);
+          break;
+        case "-";
+          z = x-y;
+          break;
+        case "*";
+          z = x*y;
+          break;
+        case "/";
+          z = x/y;
+          break;
+        default:
+          z = "값을 정상적으로 입력하셔야 합니다.";
+          break;
+      }
+      document.write(x+op+y+"="+z);
+    </script>
+  </body>
+</html>
