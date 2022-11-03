@@ -1,0 +1,70 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  perspective: 1000px;
+}
+/*
+  perspective: 1000px; : perspective 값이 작을수록 원근감을 가까이서 느끼는 개념, 원근감을 디테일하게 조정가능
+  (이제 back을 div 요소를 회전시켜보자.)
+*/
+
+.flip-button{
+  width: 200px;
+  height: 100px;
+
+  color: white;
+  text-align: center;
+  line-height: 100px;
+
+  transform-style: preserve-3d;
+  transition: .5s;
+  cursor: pointer;
+}
+/*
+  공식처럼 외워도 된다.
+  height와 line-height의 px를 같게 하면 수직중앙정렬이 가능하다.(단, 텍스트가 한 줄일 때만 가능)
+
+  transform-style: preserve-3d; : 화면상 확인은 불가능하나, class=flip-button 하위 태그는 모두 3D 공간에 배치
+  transition: .5s; : transform: rotateX(-40deg); 이라는 회전에 해당하는 애니메이션이 0.5초에 걸쳐서 보일 수 있게 CSS 속성을 작성하겠다는 의미
+  cursor: pointer; : 좀 더 실제적으로 나타내기 위해 마우스커서를 박스에 올렸을 때, 손가락 모양으로 변경
+*/
+
+.flip-button:hover{
+  transform: rotateX(-90deg);
+}
+
+.front{
+  background-color: goldenrod;
+  height: 100px;
+  transform: translateZ(50px);
+}
+
+.back{
+  background-color: darkgoldenrod;
+  height: 100px;
+
+  transform: rotateX(90deg) translateZ(150px);
+}
+/*
+  transform: retateX(30deg); : X축을 기준으로 '30deg' 각도만큼 요소가 회전하게 된다.
+  translateZ(40px); : Z축을 기준으로 위 아래로 움직인다.
+  (※ 위, 아래인데 Y축이 아닌 이유는 메모장 참고)
+  translateZ(150px); : 없을 때는 front박스에서 50px 아래로 떨어져 있음. 따라서, front박스 위에 back박스를 올리기 위해서는 50px를 추가로 더하여 150px로 설정한다.
+  (※ 왜 50px이냐면, rotateX로 90도 회전했기에 back박스가 100px이므로 이에 절반인 50px만큼 떨어져있는 개념)
+  같은 개념으로 front박스에도 translateZ(50px)을 집어넣자.(※ 150px 아님)
+
+  ★ 각 class(flip-button, front, back)별로 rotate와 translate값을 조정하면서 개념을 디테일하게 잡아가자.
+*/
