@@ -1,0 +1,105 @@
+@font-face{
+  font-family: abster;
+  src:url(font/abster-webfont.woff) format('woff');
+}
+/*
+  HTML 파일에서 <h1> 태그의 DESIGN의 폰트부터 변경해보자.
+  현재 font 파일에 있는 abster 폰트는 구글에서 지원하지 않는 폰트이므로,
+  폰트파일을 참조하여 적용하는 순으로 적용해야 한다.
+*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/room.jpg);
+}
+/*
+  height: 100vh; :100%가 아닌 vh인 이유는 100%라고 하면 실제로 전체크기를 차지하지 못하기 때문
+  (width는 가능한데, height는 불가능한게 %가 갖는 문제점이며,
+  100%가 적용되게 하려면, html과 body 태그에도 100%를 적용해야 하며,
+  이는 번거로우니 뷰포트 단위인 vh로 변경해서 사용하자)
+*/
+
+.container .header{
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+  해당 요소가 항상 수평 기준으로 중앙에 오게 만들기 위해 '0 auto' 사용
+  (원래는 margin-left: auto, margin-right: auto가 정석이지만,
+  여기서는 margin-top, margint-buttom이 0이어도 상관없기 때문에
+  margin: 0 auto로 작성한다.)
+  display: flex; : 아이템의 원활한 정렬을 위해 flex를 사용
+  justify-content: space-between; : 해당 요소가 항상 좌우 끝으로 붙어서 출력되는 것을 의미
+  (이를 통해 header안에 있는 h1 태그와 navigator class가 양옆으로 붙게 된다.)
+
+  align-items: center;는 height: 80px 기준으로 가운데를 의미함
+*/
+
+.container .header h1 a{
+  text-decoration: none;
+  color: white;
+  font-family: abster;
+}
+
+.container .navigator ul li{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.container .navigator ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.container .navigator ul li a:hover{
+  color: #1fdfdf;
+}
+
+.container .hero{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+
+  color:white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2{
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.container .hero p{
+  font-size: 22px;
+}
+
+.container .hero button{
+  background: none;
+  border: 2px solid darkseagreen;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
+
+  margin-top: 30px;
+  outline: none;
+  cursor: pointer;
+
+  transition: all .4s;
+}
+
+.container .hero button:hover{
+  background-color: darkslategray;
+}
