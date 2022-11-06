@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Calculator</title>
+    <link href="Practice_Website Calculator_CSS.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--계산기를 떠올려보자.
+    모든 버튼들을 클릭할 수 있는 요소이므로, input 태그 또는 button 태그를 이용하자.
+    특히, 계산기는 버튼을 사용자가 누르면, 그대로 계산식에 입력되므로, 사용자와의 '상호작용성'이 큰 프로젝트이다.
+    따라서, button 태그보다 상호작용의 의미가 강력한 input 태그를 사용하는 게 적절할 것으로 보인다.
+    (※ input 태그는 form 태그와 같이 사용을 해줘야 한다. why?)-->
+
+    <!--이제 계산기 요소를 하나씩 마크업(mark-up)해보자.
+    01. 입력값 또는 결과값이 보이는 영역 : input[type="text"] type속성값이 text값인 input 태그를 사용하자.
+    02. 그 외 다른 버튼들을 클릭하는 영역 : input[type="button"] type속성값이 button값인 input 태그를 사용하자.
+    영역을 구분하여 어떤 type의 input 요소를 사용할지 정리했으면,
+    03. 보이는 순서대로, html 태그를 사용하여 mark-up하자.-->
+
+    <!--html 마크업이 끝났으면, 이제 CSS 스타일 적용을 위해 필요한 class를 적용해보자.
+      c(clear) 버튼 : 빨간색
+      나머지 operator(+, -, *, /, =) : 주황색(오렌지)
+      점(마침표) : 초록색
+      숫자 : 흰색
+      이므로, 서로다른 색상 스타일을 적용하기 위해 색깔 기준으로 class를 적용해보자.
+
+    계산기라는 하나의 UI를 구분하기 위해 전체 태그를 div 태그로 감싸자.
+      class="calculator"
+    이상 스타일 적용을 위한 html 추가 코딩도 끝
+    (여기서 중요한 것은 내가 구상하고자는 계산기 레이아웃(layout)을 보고, 적절한 태그를 사용하여 html 마크업을 할 수 있는지가 중요하다.)-->
+
+    <!---->
+    <div class="calculator">
+      <form name="forms">
+        <input type="text" name="output" readonly>
+        <input type="button" class="clear" value="C" onclick="document.forms.output.value = ''">
+        <input type="button" class="operator" value="/" onclick="document.forms.output.value += '/'">
+        <input type="button" class="" value="1" onclick="document.forms.output.value += '1'">
+        <input type="button" class="" value="2" onclick="document.forms.output.value += '2'">
+        <input type="button" class="" value="3" onclick="document.forms.output.value += '3'">
+        <input type="button" class="operator" value="*" onclick="document.forms.output.value += '*'">
+        <input type="button" class="" value="4" onclick="document.forms.output.value += '4'">
+        <input type="button" class="" value="5" onclick="document.forms.output.value += '5'">
+        <input type="button" class="" value="6" onclick="document.forms.output.value += '6'">
+        <input type="button" class="operator" value="+" onclick="document.forms.output.value += '+'">
+        <input type="button" class="" value="7" onclick="document.forms.output.value += '7'">
+        <input type="button" class="" value="8" onclick="document.forms.output.value += '8'">
+        <input type="button" class="" value="9" onclick="document.forms.output.value += '9'">
+        <input type="button" class="operator" value="-" onclick="document.forms.output.value += '-'">
+        <input type="button" class="dot" value="." onclick="document.forms.output.value += '.'">
+        <input type="button" class="" value="0" onclick="document.forms.output.value += '0'">
+        <input type="button" class="operator result" value="=" onclick="document.forms.output.value = eval(document.forms.output.value)">
+      </form>
+    </div>
+  </body>
+</html>
