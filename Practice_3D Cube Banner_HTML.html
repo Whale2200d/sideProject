@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Banner</title>
+    <link href="Practice_3D Cube Banner_CSS.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="cube">
+        <img src="3d_cube/facebook.png" alt="페이스북 아이콘 이미지">
+        <img src="3d_cube/twitter.png" alt="트위터 아이콘 이미지">
+        <img src="3d_cube/youtube.png" alt="유튜브 아이콘 이미지">
+        <img src="3d_cube/instagram.png" alt="인스타 아이콘 이미지">
+      </div>
+    </div>
+    <script>
+      let deg = 0;
+      setInterval(()=>{
+        deg = deg - 90;
+        document.querySelector(".cube").style.transform = 'rotateX(' + deg + 'deg)';
+      }, 1000)
+    </script>
+  </body>
+</html>
