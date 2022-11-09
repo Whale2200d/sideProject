@@ -1,0 +1,18 @@
+Practice_SuCoding_Ghost
+
+01. HTML
+02. CSS
+03. JS
+	참고URL : https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+	The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target.
+	본 프로젝트에서는
+		1. the specified event : "mousemove"
+		2. the target : <body>였음
+		3. 참고URL : https://developer.mozilla.org/en-US/docs/Web/API/EventTarget
+		The EventTarget interface is implemented(시행하다) by objects that can receive events and may have listeners for them.
+
+	참고URL : https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+	The mousemove event is fired(발생하다) at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
+	
+	참고URL : http://www.tcpschool.com/javascript/js_dom_document
+	document.body : <body> 요소를 반환함.

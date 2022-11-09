@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost</title>
+    <link href="Practice_Ghost_CSS.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="ghost">
+      <div class="body">
+        <div class="face">
+          <div class="eye"></div>
+          <div class="eye"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+      <div class='bottom'>
+        <div class='leg'></div>
+        <div class='leg'></div>
+        <div class='leg'></div>
+        <div class='leg'></div>
+        <div class='leg'></div>
+      </div>
+    </div>
+    <script>
+      document.body.addEventListener("mousemove", function (e) {
+        document.querySelector('.ghost').style.left = e.pageX + 'px';
+        document.querySelector('.ghost').style.top = e.pageY + 'px';
+      });
+    </script>
+  </body>
+</html>
