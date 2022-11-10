@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowing Effect</title>
+    <link href="Practice_Snowing Effect_CSS.css" rel="stylesheet">
+    <link href="Practice_Ghost_CSS.css" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      function createSnow(){
+        const el = document.createElement("div");
+        el.classList.add('snow');
+        el.style.marginLeft = Math.floor(Math.random() * window.innerWidth) + 'px';
+        document.body.appendChild(el);
+      }
+      /*function randomPosition(){
+        return Math.floor(Math.random() * window.innerWidth);
+      }*/
+      for(let i=0; i<300; i++){
+        createSnow();
+      }
+      createSnow();
+      createSnow();
+      createSnow();
+    </script>
+</html>
