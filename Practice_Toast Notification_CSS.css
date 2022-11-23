@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+button {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 1rem;
+  font-family: inherit;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:active{
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+#container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.toast {
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  color: #fff;
+  padding: 2rem;
+  margin: 1rem;
+}
