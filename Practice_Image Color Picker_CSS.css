@@ -1,0 +1,116 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #025bee;
+}
+
+/* wrapper */
+.wrapper{
+  background: #ffffff;
+  width: 90%;
+  max-width: 31.25em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0.5em;
+  padding: 1.5em;
+  border-radius: 0.8em;
+}
+
+/* image-container */
+/* .image-container{} */
+.image-container img{
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+/* buttons-container */
+.buttons-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 1em 0 1.5em 0;
+}
+/* .buttons-container input#file{}
+.buttons-container label{}
+.buttons-container button#pick-color{} */
+input, label, button{
+  border: none;
+  outline: none;
+}
+input[type="file"]{
+  display: none;
+}
+label, button{
+  display: block;
+  font-size: 1.1em;
+  background: #025bee;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.8em 0;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+/* error */
+#error{
+  color: #ff725a;
+  text-align: center;
+}
+
+/* result */
+#result{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+#result div{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#result div input{
+  background: transparent;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 100%;
+  color: #313b4c;
+  border-bottom: 0.1em solid #021637;
+}
+/* #result div input#hex-val-ref{}
+#result div input#rgb-val-ref{} */
+#result div button{
+  position: absolute;
+  right: 0.6em;
+  background: transparent;
+  color: #7c8696
+}
+#result div#picked-color-ref{
+  border: 0.6em solid #d9e8ff;
+  grid-column: 2;
+  grid-row: 1 / 3;
+  border-radius: 0.5em;
+}
+
+/* custom-alert */
+#custom-alert{
+  transform: scale(0);
+  transition: 0.5s;
+  transform-origin: center;
+  background: #d9e8ff;
+  color: #025bee;
+  text-align: center;
+  padding: 0.5em;
+  margin-top: 1.5em;
+}
+
+/* hide */
+.hide{
+  display: noen;
+}
