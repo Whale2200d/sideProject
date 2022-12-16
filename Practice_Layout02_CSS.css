@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #f3e5f5;
+}
+
+#wrap{width: 100%;}
+header{
+    width: 100%;
+    height: 150px;
+
+    background: #81c784;
+}
+nav{
+    width: 30%;
+    height: 700px;
+
+    float: left;
+    background: #66bb6a;
+}
+section{
+    width: 40%;
+    height: 700px;
+
+    float: left;
+    background: #4caf50;
+}
+article{
+    width: 30%;
+    height: 700px;
+
+    float: left;
+    background: #43c047;
+}
+footer{
+    width: 100%;
+    height: 150px;
+
+    clear: both;
+    background: #388e3c;
+}
+
+/* 화면 너비 0 ~ 1200px */
+@media (max-width: 1220px){
+    nav{width: 40%;}
+    section{width: 60%;}
+    article{
+        width: 100%;
+        height: 300px;
+
+        /* float: none;
+        clear: both; */
+        /* 없어도 그만, float은 어짜피 있는 것이니까. 원래는 써주는게 맞음 */
+    }
+}
+/* 화면 너비 0 ~ 768px */
+@media (max-width: 768px){
+    nav{
+        width: 100%; height: 500px;
+
+        /* float: none; */
+    }
+    section{
+        width: 100%; height: 500px;
+
+        /* float: none; */
+    }
+}
+/* 화면 너비 0 ~ 520px */
+@media (max-width: 520px){
+    header{
+        height: 200px;
+    }
+    nav{
+        height: 200px;
+    }
+    section{
+        height: 200px;
+    }
+}
