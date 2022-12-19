@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #fffde7;
+}
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 100px;
+
+    background: #ffe082;
+}
+article{
+    width: 100%;
+    height: 300px;
+
+    background: #ffd54f;
+}
+section{
+    width: 90%;
+    padding: 5%;
+
+    overflow: hidden;
+    background: #ffca28;
+}
+section > div {
+    width: 18%;
+    height: 170px;
+    margin: 1%;
+
+    border-radius: 10%;
+
+    float: left;
+    background: #ff9800;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    
+    background: #ffb300;
+}
+
+/* 화면 너비 0 ~ 1200px */
+@media (max-width: 1220px){
+    #wrap {width: 100%;}
+    section > div {
+        width: 23%;
+    }
+    section > div:nth-child(5n) {display: none;}
+}
+/* 화면 너비 0 ~ 768px */
+@media (max-width: 768px){
+    section > div {
+        width: 31.3333%;
+    }
+    section > div:nth-child(5) {display: block;}
+}
+/* 화면 너비 0 ~ 520px */
+@media (max-width: 520px){
+    section > div {
+        width: 48%;
+    }
+    section > div:nth-child(5n) {display: block;}
+}
